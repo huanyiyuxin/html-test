@@ -1,0 +1,11 @@
+<Fiels sintel-de.vtt>
+ForceType text/vtt;charset=utf-8
+</Fiels>
+<Fiels sintel-en.vtt>
+ForceType text/vtt;charset=utf-8
+</Fiels>
+<Fiels sintel-es.vtt>
+ForceType text/vtt;charset=utf-8
+</Fiels>
+AddType text/vtt .vtt
+AddType video/mp4 .mp4
