@@ -1,0 +1,148 @@
+一.<video>标签允许嵌入一个简单的视频，
+当中的一些属性如下:
+1.src
+同 <img> 标签使用方式相同，src 属性指向你想要嵌入网页当中的视频资源，他们的使用方式完全相同。
+将 src 属性从 <video> 标签中移除，转而将它放在几个单独的标签 <source> 当中,浏览器将会检查 <source> 标签，并且播放第一个与其自身 codec 向匹配的媒体。你的视频应当包括 WebM 和 MP4 两种格式，这两种在目前已经足够支持大多数平台和浏览器。
+#例子
+<video controls>
+  <source src="rabbit320.mp4" type="video/mp4">
+  <source src="rabbit320.webm" type="video/webm">
+  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+</video>
+2.controls
+用户必须能够控制视频和音频的回放功能。你可以使用浏览器提供的控制接口，同时你也可以在 JavaScript （JavaScript API）当中使用这些控制接口。至少，这些媒体应该包括开始和停止，以及调整音量的功能。
+3.<video> 标签内的段落
+这个叫做后备内容 — 当浏览器不支持 <video> 标签的时候，它将会显示出来，它使我们能够对旧的浏览器做一些兼容处理。你可以添加任何后备内容，在这个例子中我们提供了一个指向这个视频文件的链接，从而使用户可以至少访问到这个文件，而不会局限于浏览器的支持。
+4.width 和 height
+你可以用属性控制视频的尺寸，也可以用 CSS 来控制视频尺寸。 无论使用哪种方式，视频都会保持它原始的长宽比 — 也叫做纵横比。如果你设置的尺寸没有保持视频原始长宽比，那么视频边框将会拉伸，而未被视频内容填充的部分，将会显示默认的背景颜色。
+5.autoplay
+这个属性会使音频和视频内容立即播放，即使页面的其他部分还没有加载完全。建议不要应用这个属性在你的网站上，因为用户们会比较反感自动播放的媒体文件。
+6.loop
+这个属性可以让音频或者视频文件循环播放。同样不建议使用，除非有必要。
+7.muted
+这个属性会导致媒体播放时，默认关闭声音。
+8.poster
+这个属性指向了一个图像的URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。
+9.preload
+这个属性被用来缓冲较大的文件，有3个值可选：
+•"none" ：不缓冲
+•"auto" ：页面加载后缓存媒体文件
+•"metadata" ：仅缓冲文件的元数据
+#例子
+<video controls width="400" height="400"
+       autoplay loop muted
+       poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4">
+  <source src="rabbit320.webm" type="video/webm">
+  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+</video>
+
+二.<audio> 标签用于嵌入一个音频文件。与 <video> 标签的使用方式几乎完全相同，有一些细微的差别比如边框不同。
+
+
+三.<sup>标签用于上标,<sub>标签用于下标。
+#
+<p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+<p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+<p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+这些代码输出的结果是：
+My birthday is on the 25th of May 2001.
+Caffeine's chemical formula is C8H10N4O2.
+If x2 is 9, x must equal 3 or -3.
+
+
+四.空格：
+&nbsp;
+#注意后面;不能少
+
+五.表单
+1.<form>标签用于创建表单
+• action 属性定义了在提交表单时所收集的数据的位置(URL)。.
+• method 属性定义了发送数据的HTTP方法(它可以是“get”或“post”).
+•autofocus (false) 这个布尔属性允许您指定当页面加载时元素应该自动具有输入焦点，除非用户覆盖它，例如通过键入不同的控件。文档中只有一个与表单相关的元素可以指定这个属性。 
+•disabled (false) 
+这个布尔属性表示用户不能与元素交互。如果没有指定这个属性，元素将从包含的元素继承它的设置，例如<fieldset>;如果没有包含disabled属性集的元素，那么就启用了元素。
+ 
+•form   
+小部件与之相关联的表单元素。属性值必需是同个文档中的<form> 属性的 id属性。理论上，它允许您在<form>元素之外设置一个表单小部件。然而，在实践中，没有任何支持该特性的浏览器。
+ 
+•name   元素的名称;这是用于表单数据提交的。 
+•value   元素的初始值。 
+
+
+2.<input>标签用于输入。 <input>元素中，最重要的属性是type 属性。这个属性非常重要，因为它定义了<input>属性的行为方式。它可以从根本上改变元素，所以要注意它。
+  <input> 标签是一个空元素，它不需要关闭标签。
+  •<input type="text" />定义文本输入
+  •<input type="password">定义密码输入
+  •<input type="radio">定义单项选择输入
+  •<input type="checkbox">定义多选输入
+  •<textarea"></textarea>定义文本域输入，它不是空元素，需要闭合标签。
+  •<textarea> 元素属性：
+	•cols  文本控件的可见宽度，平均字符宽度。 
+	•rows  控制的可见文本行数。 
+	•wrap  表示控件是如何包装文本的。可能的值：hard 或 soft 
+  
+  •<select>标签定义选择框，其中有一个或多个<option>元素作为子元素，每个元素都制定了其中一个可能的值。<option>元素也可以嵌套在<optgroup>元素中，以创建视觉相关的组值。
+  默认情况下，选择框只允许用户选择一个值。通过将multiple属性添加到<select>元素，您可以允许用户通过操作系统提供的默认机制来选择几个值。
+   #
+   <select id="groups" name="groups">
+	  <optgroup label="fruits">
+		<option>Banana</option>
+		<option selected>Cherry</option>
+		<option>Lemon</option>
+	  </optgroup>
+	  <optgroup label="vegetables">
+		<option>Carrot</option>
+		<option>Eggplant</option>
+		<option>Potato</option>
+	  </optgroup>
+   </select>
+   #多选下拉选择框
+   <select multiple id="multi" name="multi">
+	  <option>Banana</option>
+	  <option>Cherry</option>
+	  <option>Lemon</option>
+   </select>
+  ...
+  
+3.<button>元素定义按钮，它也接受type属性（submit、reste、button）:
+ •单击 submit 按钮 发送表单的数据到<form>元素的action 属性所定义的网页。
+ •单击 reset 按钮 将所有表单小部件重新设置为它们的默认值。从用户体验的角度来看，这被认为是一种糟糕的做法。
+ •单击button 按钮……不会发生任何事！这听起来很傻，但是用JavaScript构建定制按钮非常有用。 
+
+4.<fieldset>标签用于创建具有相同目的的小部件组，<legend>标签用于描述<fieldset>标签的用途。
+ #
+	<form>
+	  <fieldset>
+		<legend>Fruit juice size</legend>
+		<p>
+		  <input type="radio" name="size" id="size_1" value="small">
+		  <label for="size_1">Small</label>
+		</p>
+		<p>
+		  <input type="radio" name="size" id="size_2" value="medium">
+		  <label for="size_2">Medium</label>
+		</p>
+		<p>
+		  <input type="radio" name="size" id="size_3" value="large">
+		  <label for="size_3">Large</label>
+		</p>
+	  </fieldset>
+	</form>
+
+5.发送文件。如果你想要发送文件，你需要额外的三个步骤：
+	•将method属性设置为POST，因为文件内容不能放入URL参数中。
+	•将enctype的值设置为multipart/form-data，因为数据将被分成多个部分，每个文件分别对应一个文件以及表单正文中包含的文本数据(如果文本也输入到表单中)。
+	•包含一个或多个File picker小部件，允许用户选择将要上传的文件。
+    #
+	<form method="post" enctype="multipart/form-data">
+	  <div>
+		<label for="file">Choose a file</label>
+		<input type="file" id="file" name="myFile">
+	  </div>
+	  <div>
+		<button>Send the file</button>
+	  </div>
+	</form>
+	
+
